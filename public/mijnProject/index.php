@@ -9,23 +9,17 @@ if (!$DBverbinding) {
 // Geef de foutmelding die de server teruggeeft en stop met de uitvoer van PHP (die)
 die("Verbinding mislukt: " . mysqli_connect_error());
 }
-else {
-// Dit gedeelte laat je normaliter weg, maar is hier ter illustratie toegevoegd
-echo '<i>verbinding database succesvol</i>';
-}
+
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="nl">
     <head>
         <title>Startpagina</title>
-        <link rel="stylesheet" type="text/css" href="css/design.css">
     </head>
     <body>
-        <div id="container">
-            <h1>
-                <?php echo 'een <strong>klein</strong> stukje PHP';?>
-            </h1>
-            <img src="images/cartoon.jpg">
-        </div>
+        <a href="https://8001-b639f778-3a3b-412f-90a0-2f90d268f70a.ws-eu01.gitpod.io/mijnProject/php/circuits.php">C I R C U I T S</a>
+        <a href="https://8001-b639f778-3a3b-412f-90a0-2f90d268f70a.ws-eu01.gitpod.io/mijnProject/php/coureurs.php">C O U R E U R S</a>
+        <a href="https://8001-b639f778-3a3b-412f-90a0-2f90d268f70a.ws-eu01.gitpod.io/mijnProject/php/teams.php">T E A M S</a>
     </body>
 </html>
