@@ -71,7 +71,6 @@ body {
 .headerKeuze2:hover::after {
    left: 0%;
    width: 100%;
-
 }
 
 
@@ -80,16 +79,47 @@ body {
     background-color:rgb(0, 0, 0);
     height:70px;
     font-family: 'Titillium Web', sans-serif;
-    letter-spacing: .2px;
+}
+
+.hoofddeel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.circuit, .coureur, .team {
+    border: 10px black solid;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5% 0%;
+    background: rgb(255, 255, 255);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 34px;
+    text-align: center;
+    cursor: pointer;
+    position:relative;
 }
 
 .circuit {
-    display: inline-block;
-    display: flex;
-    height: 200px;
-    width: 20%;
-    margin: 5%;
-    margin-right: 0%;
-    float: left;
-   
+    width: 25%;
+    height: 230px;
+}
+
+.coureur {
+    width: 40%;
+    height: 300px;
+}
+
+.team {
+    width: 55%;
+    height: 400px;
+}
+
+.link {
+position:absolute; 
+width:100%;
+height:100%;
+top:0;
+left: 0;
+z-index: 1;
 }

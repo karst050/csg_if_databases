@@ -1,7 +1,14 @@
 <?php
 $check = 'header.php geladen.<br>';
-require('database.php');
 session_start();
+if (isset($_SESSION["user"])) {
+    $check = $check.'gebruiker ingelogd.<br>';
+}
+else {
+    $check = $check.'niemand ingelogd.<br>';
+    $css = 'public.css';
+    header("Location: ../index.php");
+}
 ?>
 
 <!doctype html>
@@ -24,7 +31,7 @@ session_start();
                     <a href="https://8001-b639f778-3a3b-412f-90a0-2f90d268f70a.ws-eu01.gitpod.io/mijnProject/php/teams.php" class="headerKeuze2">T E A M S</a>
                 </div>
                 <div class="headerButton" style="width: 100%; height: 100px; display: table-cell;">
-                    <a href="https://8001-b639f778-3a3b-412f-90a0-2f90d268f70a.ws-eu01.gitpod.io/mijnProject" class="headerButton">Log uit:</a>
+                    <a href="logout.php" class="headerButton">Log uit:</a>
                 </div>
             </div>
         </header> 
