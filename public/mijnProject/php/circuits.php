@@ -9,7 +9,6 @@ if (!$DBverbinding) {
 die("Verbinding mislukt: " . mysqli_connect_error());
 }
 require('header.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -23,43 +22,43 @@ require('header.php');
         
             <div class="circuit">
                 Melbourne
-                <a href="https://8001-b639f778-3a3b-412f-90a0-2f90d268f70a.ws-eu01.gitpod.io/mijnProject/php/melbourne.php">
+                <a href="../circuits/melbourne.php">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Bahrein
-                <a href="http://example.com">
+                <a href="../circuits/bahrein.php">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Hanoi
-                <a href="http://example.com">
+                <a href="../circuits/hanoi.php">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Shanghai
-                <a href="http://example.com">
+                <a href="../circuits/shanghai.php">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Zandvoort
-                <a href="http://example.com">
+                <a href="../circuits/zandvoort.php">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Barcelona
-                <a href="http://example.com">
+                <a href="../circuits/barcelona.php">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Monaco
-                <a href="http://example.com">
+                <a href="../circuits/monaco.php">
                     <span class="link"></span>
                 </a>
             </div>
