@@ -1,84 +1,168 @@
 <?php
     error_reporting(E_ALL & ~E_NOTICE);
-    require('../php/database.php');
     require('../php/header.php');
-    $DBverbinding = mysqli_connect($servernaam, $gebruikersnaam, $wachtwoord, $database);
-    if (!$DBverbinding) {
-        die("Verbinding mislukt: " . mysqli_connect_error());  
-    }
+    require('../php/database.php');
+
+    $id='7';
+    
+    $sql = "SELECT land FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $land = mysqli_fetch_array($record);
+
+    $sql = "SELECT naam FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $naam = mysqli_fetch_array($record);
+
+    $sql = "SELECT eerste FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $eerste = mysqli_fetch_array($record);
+
+    $sql = "SELECT lengte FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $lengte = mysqli_fetch_array($record);
+
+    $sql = "SELECT rondes FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $rondes = mysqli_fetch_array($record);
+
+    $sql = "SELECT totaal FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $totaal = mysqli_fetch_array($record);
+
+    $sql = "SELECT bochten FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $bochten = mysqli_fetch_array($record);
+
+    $sql = "SELECT drs FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $drs = mysqli_fetch_array($record);
+
+    $sql = "SELECT richting FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $richting = mysqli_fetch_array($record);
+
+    $sql = "SELECT soort FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $soort = mysqli_fetch_array($record);
+
+    $sql = "SELECT winnaar FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $winnaar = mysqli_fetch_array($record);
+
+    $sql = "SELECT snelste FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $snelste = mysqli_fetch_array($record);
+
+    $sql = "SELECT foto FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $foto = mysqli_fetch_array($record);
+
+    $sql = "SELECT tekst1 FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $tekst1 = mysqli_fetch_array($record);
+
+    $sql = "SELECT tekst2 FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $tekst2 = mysqli_fetch_array($record);
+
+    $sql = "SELECT tekst3 FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $tekst3 = mysqli_fetch_array($record);
+
+    $sql = "SELECT tekst4 FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $tekst4 = mysqli_fetch_array($record);
+
+    $sql = "SELECT tekst5 FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $tekst5 = mysqli_fetch_array($record);
+
+    $sql = "SELECT tekst6 FROM circuits WHERE id=$id";
+    $record = mysqli_query($DBverbinding, $sql);
+    $tekst6 = mysqli_fetch_array($record);
 ?>
 
 <!DOCTYPE html>
 <html lang="nl">
+
     <head>
-        <title>Melbourne</title>
+        <title> <?php echo $foto[0]; ?> </title>
         <link rel="stylesheet" type="text/css" href="../css/design.css">
     </head>
+
     <body>
-        <h1>Grand Prix van Australië</h1>
+        <h1>Grand Prix van <?php echo $land[0]; ?> </h1>
         <br>
-        <h2>Albert Park:</h2>
+        <h2> <?php echo $naam[0]; ?> : </h2>
+
         <table>
             <tr>
                 <td>Eerste Grand Prix:</td>
-                <td>1996</td>
+                <td> <?php echo $eerste[0]; ?> </td>
             </tr>
             <tr>
                 <td>Circuit lengte:</td>
-                <td>5,303 km</td>
+                <td> <?php echo $lengte[0]; ?> </td>
             </tr>
             <tr>
                 <td>Aantal rondes:</td>
-                <td>58</td>
+                <td> <?php echo $rondes[0]; ?> </td>
             </tr>
             <tr>
                 <td>Totale race lengte:</td>
-                <td>307,574 km</td>
+                <td> <?php echo $totaal[0]; ?> </td>
             </tr>
             <tr>
                 <td>Aantal bochten:</td>
-                <td>16</td>
+                <td> <?php echo $bochten[0]; ?> </td>
             </tr>
             <tr>
                 <td>Aantal DRS-zones:</td>
-                <td>3</td>
+                <td> <?php echo $drs[0]; ?> </td>
             </tr>
             <tr>
                 <td>Rijrichting:</td>
-                <td>Met de klok mee</td>
+                <td> <?php echo $richting[0]; ?> </td>
             </tr>
             <tr>
                 <td>Circuit type:</td>
-                <td>Straatcircuit</td>
+                <td> <?php echo $soort[0]; ?> </td>
             </tr>
             <tr>
                 <td>Laatste winnaar:</td>
-                <td>V. Bottas, Mercedes (2019)</td>
+                <td> <?php echo $winnaar[0]; ?> </td>
             </tr>
             <tr>
                 <td>Ronde record:</td>
-                <td>1:24,125, M. Schumacher, Ferrari (2004)</td>
+                <td> <?php echo $snelste[0]; ?> </td>
             </tr>
         </table>
+
         <br>
-        <img src="../images/circuits/melbourne.png" alt="Circuit" style="width:700px; margin: 15px;">
+        <img src="../images/circuits/<?= $foto[0]?>.png" alt="Circuit" style="width:700px; margin: 15px;">
+        <br>
+
         <p>
-            De Grand Prix van Australië wordt gereden op het Albert Park circuit in Melbourne. Hiervoor werd de race gehouden in Adelaide, 
-            maar in 1993 werd besloten om de Grand Prix te verplaatsten naar Melbourne. Het circuit zou grotendeels gereden worden over de 
-            straten van Melbourne door het Albert Park en rond het Albert Park Lake.
+            <?php echo $tekst1[0]; ?>
         </p>
         <p>
-            In 1996 werd de Grand Prix voor het eerst gereden en hij werd gewonnen door Damon Hill van Williams. Door de jaren heen zou het 
-            circuit deels aangepast worden om te zorgen voor leukere en veiligere races. Maar het grootste deel van het circuit is hetzelfde 
-            gebleven. Sinds de eerste race is Albert Park de eerste Grand Prix van het seizoen, waardoor het bij veel fans een speciale status heeft.
+            <?php echo $tekst2[0]; ?>
         </p>
         <p>
-            Het circuit zelf wordt vaak beschreven als een snel maar makkelijk circuit. Volgens de coureurs is het redelijk makkelijk om de 
-            bochten te leren en om een goede racelijn door de bochten te rijden. Tijdens de kwalificatieronde van Lewis Hamilton in 2018 
-            bereikte hij een gemiddelde snelheid van wel 235 km/h. Maar omdat het circuit een straatcircuit is, is het vaak lastig om in te 
-            halen, waardoor in de meeste races er weinig mooie inhaalacties worden gemaakt.
+            <?php echo $tekst3[0]; ?>
         </p>
+        <p>
+            <?php echo $tekst4[0]; ?>
+        </p>
+        <p>
+            <?php echo $tekst5[0]; ?>
+        </p>
+        <p>
+            <?php echo $tekst6[0]; ?>
+        </p>
+
     </body>
+
 </html>
 
 <?php
