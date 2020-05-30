@@ -2,7 +2,8 @@
 error_reporting(E_ALL & ~E_NOTICE);
 require('database.php');
 require('header.php');
-$id = '0'
+$id = '0';
+global $id;
 ?>
 
 <?php 
@@ -20,7 +21,7 @@ $id = '0'
         
             <div class="circuit">
                 Melbourne
-                
+             
                     <span class="link"></span>
                 
             </div>
