@@ -2,8 +2,9 @@
 error_reporting(E_ALL & ~E_NOTICE);
 require('database.php');
 require('header.php');
-$id = '0';
-global $id;
+$id = $_GET["id"];
+
+
 ?>
 
 <?php 
@@ -18,136 +19,135 @@ global $id;
     </head>
     <body>
         <div class=hoofddeel>
-        
             <div class="circuit">
                 Melbourne
-             
+                <a href="circuits.php?id=1">
                     <span class="link"></span>
                 
             </div>
             <div class="circuit">
                 Bahrein
-                <a href="../circuits/bahrein.php">
+                <a href="circuits.php?id=2">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Hanoi
-                <a href="../circuits/hanoi.php">
+                <a href="circuits.php?id=3">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Shanghai
-                <a href="../circuits/shanghai.php">
+                <a href="circuits.php?id=4">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Zandvoort
-                <a href="../circuits/zandvoort.php">
+                <a href="circuits.php?id=5">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Barcelona
-                <a href="../circuits/barcelona.php">
+                <a href="circuits.php?id=6">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Monaco
-                <a href="../circuits/monaco.php">
+                <a href="circuits.php?id=7">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Baku
-                <a href="http://example.com">
+                <a href="circuits.php?id=8">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Montreal
-                <a href="http://example.com">
+                <a href="circuits.php?id=9">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Marseille
-                <a href="http://example.com">
+                <a href="circuits.php?id=10">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Spielberg
-                <a href="http://example.com">
+                <a href="circuits.php?id=11">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Silverstone
-                <a href="http://example.com">
+                <a href="circuits.php?id=12">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Budapest
-                <a href="http://example.com">
+                <a href="circuits.php?id=13">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Spa-Franchorchamps
-                <a href="http://example.com">
+                <a href="circuits.php?id=14">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Monza
-                <a href="http://example.com">
+                <a href="circuits.php?id=15">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Singapore
-                <a href="http://example.com">
+                <a href="circuits.php?id=16">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Sochi
-                <a href="http://example.com">
+                <a href="circuits.php?id=17">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Suzuka
-                <a href="http://example.com">
+                <a href="circuits.php?id=18">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Austin
-                <a href="http://example.com">
+                <a href="circuits.php?id=19">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Mexico-city
-                <a href="http://example.com">
+                <a href="circuits.php?id=20">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 São Paulo
-                <a href="http://example.com">
+                <a href="circuits.php?id=21">
                     <span class="link"></span>
                 </a>
             </div>
             <div class="circuit">
                 Abu Dhabi
-                <a href="http://example.com">
+                <a href="circuits.php?id=22">
                     <span class="link"></span>
                 </a>
             </div>
@@ -248,7 +248,7 @@ global $id;
     </head>
 
     <body>
-        <h1>Grand Prix van <?php echo $land[0]; echo $id;?> </h1>
+        <h1>Grand Prix van <?php echo $land[0]; ?> </h1>
         <br>
         <h2> <?php echo $naam[0]; ?> : </h2>
 
