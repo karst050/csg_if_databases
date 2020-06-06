@@ -3,8 +3,6 @@ error_reporting(E_ALL & ~E_NOTICE);
 require('database.php');
 require('header.php');
 $id = $_GET["id"];
-
-
 ?>
 
 <?php 
@@ -161,7 +159,7 @@ $id = $_GET["id"];
 
     else {
 ?>
-    <?php
+<?php
     $sql = "SELECT land FROM circuits WHERE id=$id";
     $record = mysqli_query($DBverbinding, $sql);
     $land = mysqli_fetch_array($record);
@@ -317,7 +315,14 @@ $id = $_GET["id"];
         <p>
             <?php echo $tekst6[0]; ?>
         </p>
-
+        <br>
+        <br>
+        <br>
+        <?php
+            require('comment.php');
+        ?>
+        <br>
+        <br>
     </body>
 
 </html>
@@ -327,6 +332,6 @@ $id = $_GET["id"];
 ?>
 
 <?php
- require('footer.php');
+    require('footer.php');
 ?>
 
