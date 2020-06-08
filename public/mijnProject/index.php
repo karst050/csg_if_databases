@@ -13,7 +13,13 @@ else {
                     <input type="password" class="form-control mb-2 mr-sm-2" placeholder="wachtwoord" id="pass" name="pass">
                     <button type="submit" class="btn btn-secondary mb-2">Login</button>
                 </form>
-            
+    <br>
+    <br>
+
+    <h3>Heeft u nog geen account?</h3>
+    <h4>Maak hier dan een account aan:</h4>
+    </a>
+    </div>
     </body>
 </html>
 

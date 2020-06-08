@@ -14,7 +14,7 @@ if (isset($_POST['mail'])) {
     }
     else {
         $_SESSION["melding"] = "Het is niet gelukt om in te loggen. Probeer het opnieuw.";
-        $_SESSION["alert"] = 0; // negatieve alert; kun je ook weglaten (als het niet 1 is dan...)
+        $_SESSION["alert"] = 0; 
         header("Location: ../index.php");
     }
 }
